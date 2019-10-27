@@ -19,15 +19,17 @@ def nhaplieusinhvien():
     index = 0 
     while running:
         b=input("Nhập tên sinh viên thứ {}: ".format(index+1))
-        if (b in ["+","-","*","%","&"]) and b.isdigit():
+        if (b in ["+","-","*","%","&"] and b.isdigit()):
             print("Trong tên có kí tự sai , mời nhập lại")
             continue
         else :
-            index+=1
+            
             listname[index]=b
-            running = (index==N)
+            
+        index+=1
+        running = (index<N)
     
-    return listname
+    # return listname
 # def indanhsach():
 #     listdanhsach = listname
 #     print(listdanhsach)
@@ -42,6 +44,7 @@ while running:
     
     elif int(a)==1:
         print("Chức năng nhập liệu sinh viên")
+        # nhapsosinhvien()
         nhaplieusinhvien()
         # indanhsach()
     elif int(a)==2:
